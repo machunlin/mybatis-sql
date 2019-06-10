@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.vipmro.hades.bdm.mapper.GoodsChangelistMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="net.vipmro.hades.bdm.model.GoodsChangelist">
+        <id column="id" property="id" />
+        <result column="goods_id" property="goodsId" />
+        <result column="goods_code" property="goodsCode" />
+        <result column="value" property="value" />
+        <result column="field" property="field" />
+        <result column="create_by" property="createBy" />
+        <result column="create_by_name" property="createByName" />
+        <result column="create_at" property="createAt" />
+        <result column="update_at" property="updateAt" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_by_name" property="updateByName" />
+        <result column="status" property="status" />
+        <result column="version" property="version" />
+        <result column="trace_no" property="traceNo" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, goods_id AS goodsId, goods_code AS goodsCode, value, field, create_by AS createBy, create_by_name AS createByName, create_at AS createAt, update_at AS updateAt, update_by AS updateBy, update_by_name AS updateByName, status, version, trace_no AS traceNo
+    </sql>
+    <!-- 通用别名结果列 -->
+    <sql id="Alias_Column_List">
+        a.id,
+        a.goods_id AS goodsId,
+        a.goods_code AS goodsCode,
+        a.value,
+        a.field,
+        a.create_by AS createBy,
+        a.create_by_name AS createByName,
+        a.create_at AS createAt,
+        a.update_at AS updateAt,
+        a.update_by AS updateBy,
+        a.update_by_name AS updateByName,
+        a.status,
+        a.version,
+        a.trace_no AS traceNo,
+        </sql>
+
+</mapper>

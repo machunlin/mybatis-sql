@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.vipmro.athena.directory.service.mapper.PassportMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="net.vipmro.athena.directory.service.model.Passport">
+        <id column="id" property="id" />
+        <result column="login_name" property="loginName" />
+        <result column="login_password" property="loginPassword" />
+        <result column="type" property="type" />
+        <result column="real_name" property="realName" />
+        <result column="sex" property="sex" />
+        <result column="phone" property="phone" />
+        <result column="email" property="email" />
+        <result column="head_path" property="headPath" />
+        <result column="register_ip" property="registerIp" />
+        <result column="register_at" property="registerAt" />
+        <result column="login_success_times" property="loginSuccessTimes" />
+        <result column="login_fail_times" property="loginFailTimes" />
+        <result column="login_total_times" property="loginTotalTimes" />
+        <result column="last_login_ip" property="lastLoginIp" />
+        <result column="last_login_at" property="lastLoginAt" />
+        <result column="enabled_at" property="enabledAt" />
+        <result column="enabled_by" property="enabledBy" />
+        <result column="enabled_by_name" property="enabledByName" />
+        <result column="disabled_at" property="disabledAt" />
+        <result column="disabled_by" property="disabledBy" />
+        <result column="disabled_by_name" property="disabledByName" />
+        <result column="reset_password" property="resetPassword" />
+        <result column="remark" property="remark" />
+        <result column="status" property="status" />
+        <result column="version" property="version" />
+        <result column="create_at" property="createAt" />
+        <result column="create_by" property="createBy" />
+        <result column="create_by_name" property="createByName" />
+        <result column="update_at" property="updateAt" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_by_name" property="updateByName" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, login_name AS loginName, login_password AS loginPassword, type, real_name AS realName, sex, phone, email, head_path AS headPath, register_ip AS registerIp, register_at AS registerAt, login_success_times AS loginSuccessTimes, login_fail_times AS loginFailTimes, login_total_times AS loginTotalTimes, last_login_ip AS lastLoginIp, last_login_at AS lastLoginAt, enabled_at AS enabledAt, enabled_by AS enabledBy, enabled_by_name AS enabledByName, disabled_at AS disabledAt, disabled_by AS disabledBy, disabled_by_name AS disabledByName, reset_password AS resetPassword, remark, status, version, create_at AS createAt, create_by AS createBy, create_by_name AS createByName, update_at AS updateAt, update_by AS updateBy, update_by_name AS updateByName
+    </sql>
+    <!-- 通用别名结果列 -->
+    <sql id="Alias_Column_List">
+        a.id,
+        a.login_name AS loginName,
+        a.login_password AS loginPassword,
+        a.type,
+        a.real_name AS realName,
+        a.sex,
+        a.phone,
+        a.email,
+        a.head_path AS headPath,
+        a.register_ip AS registerIp,
+        a.register_at AS registerAt,
+        a.login_success_times AS loginSuccessTimes,
+        a.login_fail_times AS loginFailTimes,
+        a.login_total_times AS loginTotalTimes,
+        a.last_login_ip AS lastLoginIp,
+        a.last_login_at AS lastLoginAt,
+        a.enabled_at AS enabledAt,
+        a.enabled_by AS enabledBy,
+        a.enabled_by_name AS enabledByName,
+        a.disabled_at AS disabledAt,
+        a.disabled_by AS disabledBy,
+        a.disabled_by_name AS disabledByName,
+        a.reset_password AS resetPassword,
+        a.remark,
+        a.status,
+        a.version,
+        a.create_at AS createAt,
+        a.create_by AS createBy,
+        a.create_by_name AS createByName,
+        a.update_at AS updateAt,
+        a.update_by AS updateBy,
+        a.update_by_name AS updateByName,
+        </sql>
+
+</mapper>

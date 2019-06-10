@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.vipmro.athena.directory.service.mapper.RoleResMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="net.vipmro.athena.directory.service.model.RoleRes">
+        <id column="id" property="id" />
+        <result column="role_id" property="roleId" />
+        <result column="res_id" property="resId" />
+        <result column="status" property="status" />
+        <result column="version" property="version" />
+        <result column="create_at" property="createAt" />
+        <result column="create_by" property="createBy" />
+        <result column="create_by_name" property="createByName" />
+        <result column="update_at" property="updateAt" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_by_name" property="updateByName" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, role_id AS roleId, res_id AS resId, status, version, create_at AS createAt, create_by AS createBy, create_by_name AS createByName, update_at AS updateAt, update_by AS updateBy, update_by_name AS updateByName
+    </sql>
+    <!-- 通用别名结果列 -->
+    <sql id="Alias_Column_List">
+        a.id,
+        a.role_id AS roleId,
+        a.res_id AS resId,
+        a.status,
+        a.version,
+        a.create_at AS createAt,
+        a.create_by AS createBy,
+        a.create_by_name AS createByName,
+        a.update_at AS updateAt,
+        a.update_by AS updateBy,
+        a.update_by_name AS updateByName,
+        </sql>
+
+</mapper>

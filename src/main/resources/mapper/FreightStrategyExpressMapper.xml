@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.vipmro.hades.oms.mapper.FreightStrategyExpressMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="net.vipmro.hades.oms.model.FreightStrategyExpress">
+        <id column="id" property="id" />
+        <result column="freight_strategy_id" property="freightStrategyId" />
+        <result column="province" property="province" />
+        <result column="province_code" property="provinceCode" />
+        <result column="express_time" property="expressTime" />
+        <result column="grade" property="grade" />
+        <result column="start_weight" property="startWeight" />
+        <result column="end_weight" property="endWeight" />
+        <result column="ladder_start_weight" property="ladderStartWeight" />
+        <result column="ladder_start_price" property="ladderStartPrice" />
+        <result column="continued_weight" property="continuedWeight" />
+        <result column="continued_price" property="continuedPrice" />
+        <result column="remark" property="remark" />
+        <result column="create_by" property="createBy" />
+        <result column="create_by_name" property="createByName" />
+        <result column="create_at" property="createAt" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_by_name" property="updateByName" />
+        <result column="update_at" property="updateAt" />
+        <result column="status" property="status" />
+        <result column="version" property="version" />
+        <result column="trace_no" property="traceNo" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, freight_strategy_id AS freightStrategyId, province, province_code AS provinceCode, express_time AS expressTime, grade, start_weight AS startWeight, end_weight AS endWeight, ladder_start_weight AS ladderStartWeight, ladder_start_price AS ladderStartPrice, continued_weight AS continuedWeight, continued_price AS continuedPrice, remark, create_by AS createBy, create_by_name AS createByName, create_at AS createAt, update_by AS updateBy, update_by_name AS updateByName, update_at AS updateAt, status, version, trace_no AS traceNo
+    </sql>
+    <!-- 通用别名结果列 -->
+    <sql id="Alias_Column_List">
+        a.id,
+        a.freight_strategy_id AS freightStrategyId,
+        a.province,
+        a.province_code AS provinceCode,
+        a.express_time AS expressTime,
+        a.grade,
+        a.start_weight AS startWeight,
+        a.end_weight AS endWeight,
+        a.ladder_start_weight AS ladderStartWeight,
+        a.ladder_start_price AS ladderStartPrice,
+        a.continued_weight AS continuedWeight,
+        a.continued_price AS continuedPrice,
+        a.remark,
+        a.create_by AS createBy,
+        a.create_by_name AS createByName,
+        a.create_at AS createAt,
+        a.update_by AS updateBy,
+        a.update_by_name AS updateByName,
+        a.update_at AS updateAt,
+        a.status,
+        a.version,
+        a.trace_no AS traceNo,
+        </sql>
+
+</mapper>

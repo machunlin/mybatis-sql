@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.vipmro.hades.bdm.mapper.GoodsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="net.vipmro.hades.bdm.model.Goods">
+        <id column="id" property="id" />
+        <result column="code" property="code" />
+        <result column="ezhu_code" property="ezhuCode" />
+        <result column="name" property="name" />
+        <result column="short_name" property="shortName" />
+        <result column="name_en" property="nameEn" />
+        <result column="short_name_en" property="shortNameEn" />
+        <result column="type" property="type" />
+        <result column="picture_url" property="pictureUrl" />
+        <result column="video_type" property="videoType" />
+        <result column="video_url" property="videoUrl" />
+        <result column="video_name" property="videoName" />
+        <result column="min_sales_price" property="minSalesPrice" />
+        <result column="max_purchase_price" property="maxPurchasePrice" />
+        <result column="min_order_quantity" property="minOrderQuantity" />
+        <result column="safety_stock" property="safetyStock" />
+        <result column="category_id" property="categoryId" />
+        <result column="category_no" property="categoryNo" />
+        <result column="category_name" property="categoryName" />
+        <result column="brand_category_id" property="brandCategoryId" />
+        <result column="brand_category_code" property="brandCategoryCode" />
+        <result column="brand_category_name" property="brandCategoryName" />
+        <result column="ext_category_id" property="extCategoryId" />
+        <result column="tax_category_id" property="taxCategoryId" />
+        <result column="tax_category_code" property="taxCategoryCode" />
+        <result column="tax_category_name" property="taxCategoryName" />
+        <result column="brand_id" property="brandId" />
+        <result column="brand_name" property="brandName" />
+        <result column="series" property="series" />
+        <result column="series_group" property="seriesGroup" />
+        <result column="model" property="model" />
+        <result column="buy_no" property="buyNo" />
+        <result column="syn_code" property="synCode" />
+        <result column="approval_number" property="approvalNumber" />
+        <result column="market_price" property="marketPrice" />
+        <result column="product_area" property="productArea" />
+        <result column="manufacturer_id" property="manufacturerId" />
+        <result column="manufacturer" property="manufacturer" />
+        <result column="sales_unit_id" property="salesUnitId" />
+        <result column="sales_unit" property="salesUnit" />
+        <result column="sales_unit_code" property="salesUnitCode" />
+        <result column="sales_unit_brief" property="salesUnitBrief" />
+        <result column="package_num" property="packageNum" />
+        <result column="purchase_unit_id" property="purchaseUnitId" />
+        <result column="purchase_unit" property="purchaseUnit" />
+        <result column="purchase_unit_code" property="purchaseUnitCode" />
+        <result column="purchase_unit_brief" property="purchaseUnitBrief" />
+        <result column="convert_sales_unit" property="convertSalesUnit" />
+        <result column="convert_purchase_unit" property="convertPurchaseUnit" />
+        <result column="is_insured" property="isInsured" />
+        <result column="is_fragile" property="isFragile" />
+        <result column="is_dangerous" property="isDangerous" />
+        <result column="is_frozen" property="isFrozen" />
+        <result column="is_shelflife_manage" property="isShelflifeManage" />
+        <result column="is_batch_manage" property="isBatchManage" />
+        <result column="is_series_manage" property="isSeriesManage" />
+        <result column="is_permit_exceed" property="isPermitExceed" />
+        <result column="is_hot" property="isHot" />
+        <result column="is_new" property="isNew" />
+        <result column="is_guarantee_manage" property="isGuaranteeManage" />
+        <result column="is_permit_refund" property="isPermitRefund" />
+        <result column="is_effectived" property="isEffectived" />
+        <result column="used_status" property="usedStatus" />
+        <result column="shelflife_days" property="shelflifeDays" />
+        <result column="advent_days" property="adventDays" />
+        <result column="advent_alert_days" property="adventAlertDays" />
+        <result column="no_sale_days" property="noSaleDays" />
+        <result column="no_sale_alert_days" property="noSaleAlertDays" />
+        <result column="no_charge_days" property="noChargeDays" />
+        <result column="guarantee_days" property="guaranteeDays" />
+        <result column="remark" property="remark" />
+        <result column="create_by" property="createBy" />
+        <result column="create_by_name" property="createByName" />
+        <result column="create_at" property="createAt" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_by_name" property="updateByName" />
+        <result column="update_at" property="updateAt" />
+        <result column="status" property="status" />
+        <result column="version" property="version" />
+        <result column="trace_no" property="traceNo" />
+        <result column="audited_by" property="auditedBy" />
+        <result column="audited_by_name" property="auditedByName" />
+        <result column="audited_at" property="auditedAt" />
+        <result column="disabled_by" property="disabledBy" />
+        <result column="disabled_by_name" property="disabledByName" />
+        <result column="disabled_at" property="disabledAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, code, ezhu_code AS ezhuCode, name, short_name AS shortName, name_en AS nameEn, short_name_en AS shortNameEn, type, picture_url AS pictureUrl, video_type AS videoType, video_url AS videoUrl, video_name AS videoName, min_sales_price AS minSalesPrice, max_purchase_price AS maxPurchasePrice, min_order_quantity AS minOrderQuantity, safety_stock AS safetyStock, category_id AS categoryId, category_no AS categoryNo, category_name AS categoryName, brand_category_id AS brandCategoryId, brand_category_code AS brandCategoryCode, brand_category_name AS brandCategoryName, ext_category_id AS extCategoryId, tax_category_id AS taxCategoryId, tax_category_code AS taxCategoryCode, tax_category_name AS taxCategoryName, brand_id AS brandId, brand_name AS brandName, series, series_group AS seriesGroup, model, buy_no AS buyNo, syn_code AS synCode, approval_number AS approvalNumber, market_price AS marketPrice, product_area AS productArea, manufacturer_id AS manufacturerId, manufacturer, sales_unit_id AS salesUnitId, sales_unit AS salesUnit, sales_unit_code AS salesUnitCode, sales_unit_brief AS salesUnitBrief, package_num AS packageNum, purchase_unit_id AS purchaseUnitId, purchase_unit AS purchaseUnit, purchase_unit_code AS purchaseUnitCode, purchase_unit_brief AS purchaseUnitBrief, convert_sales_unit AS convertSalesUnit, convert_purchase_unit AS convertPurchaseUnit, is_insured AS isInsured, is_fragile AS isFragile, is_dangerous AS isDangerous, is_frozen AS isFrozen, is_shelflife_manage AS isShelflifeManage, is_batch_manage AS isBatchManage, is_series_manage AS isSeriesManage, is_permit_exceed AS isPermitExceed, is_hot AS isHot, is_new AS isNew, is_guarantee_manage AS isGuaranteeManage, is_permit_refund AS isPermitRefund, is_effectived AS isEffectived, used_status AS usedStatus, shelflife_days AS shelflifeDays, advent_days AS adventDays, advent_alert_days AS adventAlertDays, no_sale_days AS noSaleDays, no_sale_alert_days AS noSaleAlertDays, no_charge_days AS noChargeDays, guarantee_days AS guaranteeDays, remark, create_by AS createBy, create_by_name AS createByName, create_at AS createAt, update_by AS updateBy, update_by_name AS updateByName, update_at AS updateAt, status, version, trace_no AS traceNo, audited_by AS auditedBy, audited_by_name AS auditedByName, audited_at AS auditedAt, disabled_by AS disabledBy, disabled_by_name AS disabledByName, disabled_at AS disabledAt
+    </sql>
+    <!-- 通用别名结果列 -->
+    <sql id="Alias_Column_List">
+        a.id,
+        a.code,
+        a.ezhu_code AS ezhuCode,
+        a.name,
+        a.short_name AS shortName,
+        a.name_en AS nameEn,
+        a.short_name_en AS shortNameEn,
+        a.type,
+        a.picture_url AS pictureUrl,
+        a.video_type AS videoType,
+        a.video_url AS videoUrl,
+        a.video_name AS videoName,
+        a.min_sales_price AS minSalesPrice,
+        a.max_purchase_price AS maxPurchasePrice,
+        a.min_order_quantity AS minOrderQuantity,
+        a.safety_stock AS safetyStock,
+        a.category_id AS categoryId,
+        a.category_no AS categoryNo,
+        a.category_name AS categoryName,
+        a.brand_category_id AS brandCategoryId,
+        a.brand_category_code AS brandCategoryCode,
+        a.brand_category_name AS brandCategoryName,
+        a.ext_category_id AS extCategoryId,
+        a.tax_category_id AS taxCategoryId,
+        a.tax_category_code AS taxCategoryCode,
+        a.tax_category_name AS taxCategoryName,
+        a.brand_id AS brandId,
+        a.brand_name AS brandName,
+        a.series,
+        a.series_group AS seriesGroup,
+        a.model,
+        a.buy_no AS buyNo,
+        a.syn_code AS synCode,
+        a.approval_number AS approvalNumber,
+        a.market_price AS marketPrice,
+        a.product_area AS productArea,
+        a.manufacturer_id AS manufacturerId,
+        a.manufacturer,
+        a.sales_unit_id AS salesUnitId,
+        a.sales_unit AS salesUnit,
+        a.sales_unit_code AS salesUnitCode,
+        a.sales_unit_brief AS salesUnitBrief,
+        a.package_num AS packageNum,
+        a.purchase_unit_id AS purchaseUnitId,
+        a.purchase_unit AS purchaseUnit,
+        a.purchase_unit_code AS purchaseUnitCode,
+        a.purchase_unit_brief AS purchaseUnitBrief,
+        a.convert_sales_unit AS convertSalesUnit,
+        a.convert_purchase_unit AS convertPurchaseUnit,
+        a.is_insured AS isInsured,
+        a.is_fragile AS isFragile,
+        a.is_dangerous AS isDangerous,
+        a.is_frozen AS isFrozen,
+        a.is_shelflife_manage AS isShelflifeManage,
+        a.is_batch_manage AS isBatchManage,
+        a.is_series_manage AS isSeriesManage,
+        a.is_permit_exceed AS isPermitExceed,
+        a.is_hot AS isHot,
+        a.is_new AS isNew,
+        a.is_guarantee_manage AS isGuaranteeManage,
+        a.is_permit_refund AS isPermitRefund,
+        a.is_effectived AS isEffectived,
+        a.used_status AS usedStatus,
+        a.shelflife_days AS shelflifeDays,
+        a.advent_days AS adventDays,
+        a.advent_alert_days AS adventAlertDays,
+        a.no_sale_days AS noSaleDays,
+        a.no_sale_alert_days AS noSaleAlertDays,
+        a.no_charge_days AS noChargeDays,
+        a.guarantee_days AS guaranteeDays,
+        a.remark,
+        a.create_by AS createBy,
+        a.create_by_name AS createByName,
+        a.create_at AS createAt,
+        a.update_by AS updateBy,
+        a.update_by_name AS updateByName,
+        a.update_at AS updateAt,
+        a.status,
+        a.version,
+        a.trace_no AS traceNo,
+        a.audited_by AS auditedBy,
+        a.audited_by_name AS auditedByName,
+        a.audited_at AS auditedAt,
+        a.disabled_by AS disabledBy,
+        a.disabled_by_name AS disabledByName,
+        a.disabled_at AS disabledAt,
+        </sql>
+
+</mapper>

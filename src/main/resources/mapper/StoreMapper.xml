@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.vipmro.hades.bdm.mapper.StoreMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="net.vipmro.hades.bdm.model.Store">
+        <id column="id" property="id" />
+        <result column="code" property="code" />
+        <result column="name" property="name" />
+        <result column="type" property="type" />
+        <result column="negative_stock_flag" property="negativeStockFlag" />
+        <result column="available_stock_flag" property="availableStockFlag" />
+        <result column="country" property="country" />
+        <result column="province" property="province" />
+        <result column="city" property="city" />
+        <result column="district" property="district" />
+        <result column="town" property="town" />
+        <result column="address" property="address" />
+        <result column="keeper" property="keeper" />
+        <result column="area" property="area" />
+        <result column="phone" property="phone" />
+        <result column="interface_type" property="interfaceType" />
+        <result column="interface_param" property="interfaceParam" />
+        <result column="other_param" property="otherParam" />
+        <result column="remark" property="remark" />
+        <result column="create_by" property="createBy" />
+        <result column="create_by_name" property="createByName" />
+        <result column="create_at" property="createAt" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_by_name" property="updateByName" />
+        <result column="update_at" property="updateAt" />
+        <result column="status" property="status" />
+        <result column="version" property="version" />
+        <result column="trace_no" property="traceNo" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, code, name, type, negative_stock_flag AS negativeStockFlag, available_stock_flag AS availableStockFlag, country, province, city, district, town, address, keeper, area, phone, interface_type AS interfaceType, interface_param AS interfaceParam, other_param AS otherParam, remark, create_by AS createBy, create_by_name AS createByName, create_at AS createAt, update_by AS updateBy, update_by_name AS updateByName, update_at AS updateAt, status, version, trace_no AS traceNo
+    </sql>
+    <!-- 通用别名结果列 -->
+    <sql id="Alias_Column_List">
+        a.id,
+        a.code,
+        a.name,
+        a.type,
+        a.negative_stock_flag AS negativeStockFlag,
+        a.available_stock_flag AS availableStockFlag,
+        a.country,
+        a.province,
+        a.city,
+        a.district,
+        a.town,
+        a.address,
+        a.keeper,
+        a.area,
+        a.phone,
+        a.interface_type AS interfaceType,
+        a.interface_param AS interfaceParam,
+        a.other_param AS otherParam,
+        a.remark,
+        a.create_by AS createBy,
+        a.create_by_name AS createByName,
+        a.create_at AS createAt,
+        a.update_by AS updateBy,
+        a.update_by_name AS updateByName,
+        a.update_at AS updateAt,
+        a.status,
+        a.version,
+        a.trace_no AS traceNo,
+        </sql>
+
+</mapper>

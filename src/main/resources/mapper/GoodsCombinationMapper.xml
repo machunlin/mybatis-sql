@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.vipmro.hades.oms.mapper.GoodsCombinationMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="net.vipmro.hades.oms.model.GoodsCombination">
+        <id column="id" property="id" />
+        <result column="code" property="code" />
+        <result column="name" property="name" />
+        <result column="model" property="model" />
+        <result column="unit" property="unit" />
+        <result column="goods_total" property="goodsTotal" />
+        <result column="goods_amount" property="goodsAmount" />
+        <result column="goods_kind_number" property="goodsKindNumber" />
+        <result column="goods_group" property="goodsGroup" />
+        <result column="store_id" property="storeId" />
+        <result column="store_name" property="storeName" />
+        <result column="remark" property="remark" />
+        <result column="create_by" property="createBy" />
+        <result column="create_by_name" property="createByName" />
+        <result column="create_at" property="createAt" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_by_name" property="updateByName" />
+        <result column="update_at" property="updateAt" />
+        <result column="audited_by" property="auditedBy" />
+        <result column="audited_by_name" property="auditedByName" />
+        <result column="audited_at" property="auditedAt" />
+        <result column="canceled_by" property="canceledBy" />
+        <result column="canceled_by_name" property="canceledByName" />
+        <result column="canceled_at" property="canceledAt" />
+        <result column="status" property="status" />
+        <result column="version" property="version" />
+        <result column="trace_no" property="traceNo" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, code, name, model, unit, goods_total AS goodsTotal, goods_amount AS goodsAmount, goods_kind_number AS goodsKindNumber, goods_group AS goodsGroup, store_id AS storeId, store_name AS storeName, remark, create_by AS createBy, create_by_name AS createByName, create_at AS createAt, update_by AS updateBy, update_by_name AS updateByName, update_at AS updateAt, audited_by AS auditedBy, audited_by_name AS auditedByName, audited_at AS auditedAt, canceled_by AS canceledBy, canceled_by_name AS canceledByName, canceled_at AS canceledAt, status, version, trace_no AS traceNo
+    </sql>
+    <!-- 通用别名结果列 -->
+    <sql id="Alias_Column_List">
+        a.id,
+        a.code,
+        a.name,
+        a.model,
+        a.unit,
+        a.goods_total AS goodsTotal,
+        a.goods_amount AS goodsAmount,
+        a.goods_kind_number AS goodsKindNumber,
+        a.goods_group AS goodsGroup,
+        a.store_id AS storeId,
+        a.store_name AS storeName,
+        a.remark,
+        a.create_by AS createBy,
+        a.create_by_name AS createByName,
+        a.create_at AS createAt,
+        a.update_by AS updateBy,
+        a.update_by_name AS updateByName,
+        a.update_at AS updateAt,
+        a.audited_by AS auditedBy,
+        a.audited_by_name AS auditedByName,
+        a.audited_at AS auditedAt,
+        a.canceled_by AS canceledBy,
+        a.canceled_by_name AS canceledByName,
+        a.canceled_at AS canceledAt,
+        a.status,
+        a.version,
+        a.trace_no AS traceNo,
+        </sql>
+
+</mapper>
