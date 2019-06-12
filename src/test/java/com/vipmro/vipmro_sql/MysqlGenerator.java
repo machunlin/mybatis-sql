@@ -12,7 +12,6 @@ import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.DbColumnType;
 import com.baomidou.mybatisplus.generator.config.rules.DbType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
-//import net.vipmro.athena.common.util.RandomUtil;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -20,6 +19,8 @@ import java.text.SimpleDateFormat;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+
+//import net.vipmro.athena.common.util.RandomUtil;
 
 /**
  * <p>
@@ -33,7 +34,7 @@ public class MysqlGenerator {
 
     private static final SimpleDateFormat YYYYMD = new SimpleDateFormat("yyyy/M/d");
     private static final String BASE_PACKAGE = "com.auge.base";
-    private static final String OUT_PACKAGE = BASE_PACKAGE + ".bdm";
+    private static final String OUT_PACKAGE = BASE_PACKAGE;
 
 
     public static final String HOST = "119.3.105.213";
@@ -107,8 +108,8 @@ public class MysqlGenerator {
                         .setSuperServiceClass("com.baomidou.mybatisplus.service.IService")
                         // 自定义 service 实现类父类
                         .setSuperServiceImplClass("com.baomidou.mybatisplus.service.impl.ServiceImpl")
-                        // 自定义 controller 父类
-                        //.setSuperControllerClass("net.vipmro.athena.boot.starter.controller.BaseController")
+                // 自定义 controller 父类
+                //.setSuperControllerClass("net.vipmro.athena.boot.starter.controller.BaseController")
                 // 【实体】是否生成字段常量（默认 false）
                 // public static final String ID = "test_id";
                 // .setEntityColumnConstant(true)
