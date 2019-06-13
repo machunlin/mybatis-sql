@@ -37,11 +37,11 @@ public class MysqlGenerator {
     private static final String OUT_PACKAGE = BASE_PACKAGE;
 
 
-    public static final String HOST = "119.3.105.213";
+    public static final String HOST = "127.0.0.1";
     public static final String PORT = "3306";
-    private static final String DATA_BASE = "base";
-    public static final String USER_NAME = "root";
-    public static final String PASSWORD = "1024@Augo";
+    private static final String DATA_BASE = "dbname";
+    public static final String USER_NAME = "user";
+    public static final String PASSWORD = "pwd";
 
 
     /**
