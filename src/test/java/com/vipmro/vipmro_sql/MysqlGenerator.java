@@ -32,13 +32,13 @@ import java.util.Map;
 public class MysqlGenerator {
 
     private static final SimpleDateFormat YYYYMD = new SimpleDateFormat("yyyy/M/d");
-    private static final String BASE_PACKAGE = "com.auge.base";
-    private static final String OUT_PACKAGE = BASE_PACKAGE + ".bdm";
+    private static final String BASE_PACKAGE = "com.auge";
+    private static final String OUT_PACKAGE = BASE_PACKAGE + ".exam";
 
 
     public static final String HOST = "119.3.105.213";
     public static final String PORT = "3306";
-    private static final String DATA_BASE = "base";
+    private static final String DATA_BASE = "exam";
     public static final String USER_NAME = "root";
     public static final String PASSWORD = "1024@Augo";
 
