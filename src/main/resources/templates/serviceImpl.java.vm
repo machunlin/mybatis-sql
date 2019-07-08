@@ -1,12 +1,16 @@
-package ${package.ServiceImpl};
-
-import ${package.Entity}.${entity};
-import ${package.Mapper}.${table.mapperName};
-import ${package.Service}.${table.serviceName};
-import ${superServiceImplClassPackage};
+package ${package.ServiceImpl}import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+
+;
+${package.Entity}
+        .${entity};
+${package.Mapper}
+        .${table.mapperName};
+${package.Service}
+        .${table.serviceName};
+${superServiceImplClassPackage}
+        ;
 
 /**
  * <p>

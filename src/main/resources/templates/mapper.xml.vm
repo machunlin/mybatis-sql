@@ -36,7 +36,7 @@
     </sql>
     <!-- 通用别名结果列 -->
     <sql id="Alias_Column_List">
-#set($getprefix="a.")
+#set($getprefix="t.")
     #foreach($field in ${table.fields})
     #if(${field.name} == ${field.propertyName})${getprefix}${field.name}#else${getprefix}${field.name} AS ${field.propertyName}#end,
     #end

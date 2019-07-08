@@ -2,17 +2,12 @@ package com.vipmro.vipmro_sql;
 
 import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.InjectionConfig;
-import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
-import com.baomidou.mybatisplus.generator.config.FileOutConfig;
-import com.baomidou.mybatisplus.generator.config.GlobalConfig;
-import com.baomidou.mybatisplus.generator.config.PackageConfig;
-import com.baomidou.mybatisplus.generator.config.StrategyConfig;
+import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.converts.MySqlTypeConvert;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.DbColumnType;
 import com.baomidou.mybatisplus.generator.config.rules.DbType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
-//import net.vipmro.athena.common.util.RandomUtil;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -20,6 +15,8 @@ import java.text.SimpleDateFormat;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+
+//import net.vipmro.athena.common.util.RandomUtil;
 
 /**
  * <p>
@@ -32,13 +29,13 @@ import java.util.Map;
 public class MysqlGenerator {
 
     private static final SimpleDateFormat YYYYMD = new SimpleDateFormat("yyyy/M/d");
-    private static final String BASE_PACKAGE = "com.auge.base";
-    private static final String OUT_PACKAGE = BASE_PACKAGE + ".bdm";
+    private static final String BASE_PACKAGE = "com.auge.exam";
+    private static final String OUT_PACKAGE = BASE_PACKAGE + "";
 
 
     public static final String HOST = "119.3.105.213";
     public static final String PORT = "3306";
-    private static final String DATA_BASE = "base";
+    private static final String DATA_BASE = "exam";
     public static final String USER_NAME = "root";
     public static final String PASSWORD = "1024@Augo";
 
@@ -104,9 +101,9 @@ public class MysqlGenerator {
                         // 自定义 mapper 父类
 //                .setSuperMapperClass("com.baomidou.demo.TestMapper")
                         // 自定义 service 父类
-                        .setSuperServiceClass("com.baomidou.mybatisplus.service.IService")
+                        .setSuperServiceClass("com.baomidou.mybatisplus.extension.service.IService")
                         // 自定义 service 实现类父类
-                        .setSuperServiceImplClass("com.baomidou.mybatisplus.service.impl.ServiceImpl")
+                        .setSuperServiceImplClass("com.baomidou.mybatisplus.extension.service.impl.ServiceImpl")
                         // 自定义 controller 父类
                         //.setSuperControllerClass("net.vipmro.athena.boot.starter.controller.BaseController")
                 // 【实体】是否生成字段常量（默认 false）
