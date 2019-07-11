@@ -7,13 +7,15 @@ import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
 ;
-#foreach($pkg in ${table.importPackages})
-    #if(${pkg}!='com.baomidou.mybatisplus.annotations.TableField'&&${pkg}!=
-        'com.baomidou.mybatisplus.activerecord.Model')
-        ${pkg}
-    ;
-    #end
-#end
+
+
+###foreach($pkg in ${table.importPackages})
+##    #if(${pkg}!='com.baomidou.mybatisplus.annotations.TableField'&&${pkg}!=
+##        'com.baomidou.mybatisplus.activerecord.Model')
+##        ${pkg}
+##    ;
+##    #end
+###end
 
 /**
  * <p>
