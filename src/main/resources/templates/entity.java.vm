@@ -1,4 +1,6 @@
-package ${package.Entity}import com.auge.common.json.LongStringSerializer;
+package ${package.Entity};
+
+import com.auge.common.json.LongStringSerializer;
 import com.auge.common.model.BaseModel;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModelProperty;
@@ -6,7 +8,6 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
-;
 
 
 ###foreach($pkg in ${table.importPackages})
