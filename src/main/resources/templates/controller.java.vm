@@ -1,16 +1,25 @@
 package ${package.Controller};
 
+import com.auge.common.BaseDubboApi;
+import com.auge.common.Result;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+import org.apache.dubbo.config.annotation.Service;
+import org.apache.dubbo.rpc.protocol.rest.support.ContentType;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import org.springframework.web.bind.annotation.RequestMapping;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+##import org.springframework.web.bind.annotation.RequestMapping;
 
-#if(${restControllerStyle})
-import org.springframework.web.bind.annotation.RestController;
-#else
-import org.springframework.stereotype.Controller;
-#end
-#if(${superControllerClassPackage})
-import ${superControllerClassPackage};
-#end
+###if(${restControllerStyle})
+##import org.springframework.web.bind.annotation.RestController;
+###else
+##import org.springframework.stereotype.Controller;
+###end
+###if(${superControllerClassPackage})
+##import ${superControllerClassPackage};
+###end
 
 /**
  * <p>
@@ -20,22 +29,32 @@ import ${superControllerClassPackage};
  * @author ${author}
  * @date ${date}
  */
-#if(${restControllerStyle})
-@RestController
-#else
-@Controller
-#end
-@RequestMapping("#if(${package.ModuleName})/${package.ModuleName}#end/#if(${controllerMappingHyphenStyle})${controllerMappingHyphen}#else${table.entityPath}#end")
-#if(${kotlin})
-class ${table.controllerName}#if(${superControllerClass}) : ${superControllerClass}()#end
+###if(${restControllerStyle})
+##@RestController
+###else
+##@Controller
+###end
+##@RequestMapping("#if(${package.ModuleName})/${package.ModuleName}#end/#if(${controllerMappingHyphenStyle})${controllerMappingHyphen}#else${table.entityPath}#end")
+###if(${kotlin})
+##class ${table.controllerName}#if(${superControllerClass}) : ${superControllerClass}()#end
+###else
+###if(${superControllerClass})
+##public class ${table.controllerName} extends ${superControllerClass} {
+###else
 
-#else
-#if(${superControllerClass})
-public class ${table.controllerName} extends ${superControllerClass} {
-#else
-public class ${table.controllerName} {
-#end
+@Path("#if(${package.ModuleName})/${package.ModuleName}#end/#if(${controllerMappingHyphenStyle})${controllerMappingHyphen}#else${table.entityPath}#end")
+@Consumes({MediaType.APPLICATION_JSON, MediaType.TEXT_PLAIN})
+@Produces({ContentType.APPLICATION_JSON_UTF_8})
+@Service(protocol = "rest")
+public class ${table.controllerName} extends BaseDubboApi{
+###end
 
+    @GET
+    @Path("testGet")
+    @ApiOperation(value = "测试get", httpMethod = "GET")
+    public Result testGet(@ApiParam(required = true, value = "code编码") @QueryParam("code") String code) {
+        return success();
+    }
 }
 
-#end
+###end
